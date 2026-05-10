@@ -9,8 +9,13 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Vitesse")]
-    public float speedForward = 10f;
+    public float speedForward;
+    public float acceleration;
+    public float maxSpeed;
     public float speedSideways = 10f;
+
+    //
+    private bool _maxSpeed = false;
 
     [Header("Road")]
 
@@ -53,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Get player input
 
         var kb = Keyboard.current;
@@ -83,5 +89,20 @@ public class PlayerMovement : MonoBehaviour
 
         // Mouvement du joueur
         MovePlayer();
+    }
+
+    void FixedUpdate() {
+        // _maxSpeed is used as a kill switch to avoid testing for no reason if the max speed has already been reached
+        if (_maxSpeed == false && speedForward <= maxSpeed)
+        {
+            speedForward += acceleration;
+        }
+
+        // Detect if the max speed has been reached
+        // _maxSpeed = true makes the test above less ressource intensive
+        if(speedForward >= maxSpeed) {
+            speedForward = maxSpeed;
+            _maxSpeed = true;
+        }
     }
 }

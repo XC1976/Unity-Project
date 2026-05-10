@@ -2028,7 +2028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270f90812750aa13a8ee9558549df6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  speedForward: 10
+  speedForward: 5
+  acceleration: 0.01
+  maxSpeed: 10
   speedSideways: 10
   limitX: 5
 --- !u!143 &1868004462
