@@ -25,7 +25,6 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision avec : " + other.gameObject.name + " | Tag : " + other.tag);
 
         if (!other.CompareTag("Player"))
         {

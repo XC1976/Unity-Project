@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     // UI Game Over
     public TextMeshProUGUI textFinalScore;
     public GameObject PanelGameOver;
+
+    // UI HP of player
+    public TextMeshProUGUI textPlayerHP;
+    public int playerHP;    // Set to public because we want the ability to change the number of lives in the editor directly
     
     // ========= Private ========= //
     private int _score = 0;
@@ -33,7 +37,11 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Make the Game Over panel dissapear
         PanelGameOver.SetActive(false);
+
+        // Show the player initial amount of lives
+        textPlayerHP.text = "HP : " + playerHP;
     }
 
     // Update is called once per frame
@@ -64,12 +72,17 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        _isGameOver = true;
-
-        // Freeze the game so the user is unable to move
-        Time.timeScale = 0f;
-
-        PanelGameOver.SetActive(true);
-        textFinalScore.text = "Votre score est : " + _score;
+        if(playerHP > 1) {
+            playerHP--;
+            textPlayerHP.text = "HP : " + playerHP;
+        } else {
+            _isGameOver = true;
+    
+            // Freeze the game so the user is unable to move
+            Time.timeScale = 0f;
+    
+            PanelGameOver.SetActive(true);
+            textFinalScore.text = "Votre score est : " + _score;
+        }
     }
 }
