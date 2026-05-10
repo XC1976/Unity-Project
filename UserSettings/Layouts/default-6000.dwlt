@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 768
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 92
+  controlID: 45
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 93
+  controlID: 23
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 94
+  controlID: 24
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -658,7 +658,7 @@ MonoBehaviour:
       m_Data: 49418
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49044
+    - m_Data: 49052
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 49044
+    - m_Data: 49052
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -849,11 +849,11 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: -4506
+      m_SelectedIDs: []
       m_LastClickedID:
-        m_Data: -4506
+        m_Data: 0
       m_ExpandedIDs:
+      - m_Data: -2016
       - m_Data: -1360
       - m_Data: 48532
       - m_Data: 48588
@@ -1397,9 +1397,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 124.62037, y: 298.0517, z: -157.3688}
+    m_Target: {x: 204.90126, y: 305.75378, z: -287.01624}
     speed: 2
-    m_Value: {x: 124.62037, y: 298.0517, z: -157.3688}
+    m_Value: {x: 204.90126, y: 305.75378, z: -287.01624}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1446,9 +1446,9 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.0010796918, y: -0.059580952, z: -0.00029545586, w: -0.9984125}
+    m_Target: {x: -0.09093293, y: -0.02428756, z: 0.0018715205, w: -0.99575084}
     speed: 2
-    m_Value: {x: -0.0010794875, y: -0.059569675, z: -0.00029539995, w: -0.99822354}
+    m_Value: {x: -0.09091557, y: -0.024282921, z: 0.0018711631, w: -0.9955607}
   m_Size:
     m_Target: 0.98827887
     speed: 2

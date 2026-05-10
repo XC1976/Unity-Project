@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     // UI HP of player
     public TextMeshProUGUI textPlayerHP;
     public int playerHP;    // Set to public because we want the ability to change the number of lives in the editor directly
+
+    // UI starting screen
+    public GameObject PanelStart;
     
     // ========= Private ========= //
     private int _score = 0;
@@ -37,8 +40,14 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Make the Game Over panel dissapear
+        // Freeze the game until the player press "o" to start the game
+        Time.timeScale = 0f;
+        
+        // Make the Game Over panel disappear
         PanelGameOver.SetActive(false);
+
+        // Make the Start panel appear to matter what
+        PanelStart.SetActive(true);
 
         // Show the player initial amount of lives
         textPlayerHP.text = "HP : " + playerHP;
@@ -47,6 +56,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Unfreeze the initially frozen game if the player press "o"
+        if(Keyboard.current != null && Keyboard.current.oKey.wasPressedThisFrame) {
+            Time.timeScale = 1f;
+            // Make the start panel disappear
+            PanelStart.SetActive(false);
+        }
+        
         // Restart the scene (game) if the r key is pressed
         if(Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame) {
             // Unfreeze the scene, we froze it in the GameOver() function
